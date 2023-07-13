@@ -1,2 +1,51 @@
-<h1>VOCE AQ  👇👇👇👇</h1>
-<img src="../asset/primata.webp" height="1000">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALENGA</title>
+    <style>
+      /* CSS for rotating and blinking image */
+      .rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .blinking-image {
+        animation: blink 1s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>VOCE AQ 👇👇👇👇</h1>
+    <img src="../asset/primata.webp" class="rotate" width="500" height="500" />
+
+    <button onclick="playBackgroundMusic()">Play Music</button>
+    <script>
+      function playBackgroundMusic() {
+        var audio = new Audio("../asset/macaco.mp3");
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
